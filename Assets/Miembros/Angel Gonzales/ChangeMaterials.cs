@@ -8,19 +8,25 @@ public class ChangeMaterials : MonoBehaviour
     public Material wireMaterial;
 
     public Renderer render;
-    public float timer;
+    public float timer, changeTime = 1.8f;
     public bool change;
     // Start is called before the first frame update
-    void Start()
-    {
-        thisMaterial = render.material;
-    }
+    
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (change)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= changeTime)
+            {
+                render.material = thisMaterial;
+                change = false;
+            }
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -29,5 +35,10 @@ public class ChangeMaterials : MonoBehaviour
             Invoke("changeMaterial", 1.2f);
         }
     }
-
+    void changeMaterial() 
+    {
+        timer = 0;
+        render.material = wireMaterial;
+        change = true;
+    }
 }
