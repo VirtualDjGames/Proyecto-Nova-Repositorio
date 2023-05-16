@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7293555422934190134}
   - component: {fileID: 6510774116274259616}
   m_Layer: 0
-  m_Name: Scanner
-  m_TagString: Scanner
+  m_Name: Scanner 1
+  m_TagString: Scanner2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8210ee9f74ea1734e9314108aa6b859f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grouth: 0.25896454
-  force: 30
-  destroyTime: 3
-  colorScanner: {r: 1, g: 1, b: 1, a: 0}
+  grouth: 0.15646744
+  force: 15
+  destroyTime: 2
+  colorScanner: {r: 1, g: 0.52359486, b: 0, a: 0}
   render: {fileID: 906355897072418292}

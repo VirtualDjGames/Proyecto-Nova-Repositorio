@@ -12,7 +12,7 @@ public class ManageScaner : MonoBehaviour
     float LoudnessMicrophone;
     public float scannerCooldown = 0.8f;
     float timer;
-
+    public Transform scannerPos;
 
     // Update is called once per frame
     void Update()
@@ -20,7 +20,7 @@ public class ManageScaner : MonoBehaviour
         LoudnessMicrophone = loudnesDetection.GetLoudnessFromMicrophone();
         if (LoudnessMicrophone > minimunLoudnes && canCreate)
         {
-            GameObject scaner = Instantiate(scanner, transform.position, transform.rotation);
+            GameObject scaner = Instantiate(scanner, scannerPos.position, transform.rotation);
             scanner.GetComponent<Scaner_Life>().ScanerValues(LoudnessMicrophone);
             canCreate = false;
             Debug.Log("alcanzaste el minimo");

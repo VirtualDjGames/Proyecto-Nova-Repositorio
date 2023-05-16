@@ -10,6 +10,7 @@ public class ChangeMaterials : MonoBehaviour
     public Renderer render;
     public float timer, changeTime = 1.8f;
     public bool change;
+    
     // Start is called before the first frame update
     
 
