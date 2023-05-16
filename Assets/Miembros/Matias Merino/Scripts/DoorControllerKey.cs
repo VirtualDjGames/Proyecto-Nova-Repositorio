@@ -10,6 +10,7 @@ public class DoorControllerKey : MonoBehaviour
     public Button doorButton; 
     public Button keyButton; 
     public float rotationSpeed = 90f;
+    public float tr;
     public Transform posPuerta;
     public Transform posLlave;
     //public GameObject llave;
@@ -73,7 +74,7 @@ public class DoorControllerKey : MonoBehaviour
         if (hasKey == true)
         {
             // Rota la puerta hacia la posición abierta
-            Quaternion targetRotation = Quaternion.Euler(0f, 90f, 0f);
+            Quaternion targetRotation = Quaternion.Euler(0f, tr, 0f);
             StartCoroutine(RotateDoor(targetRotation));
 
             // Marca la puerta como abierta
