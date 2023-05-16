@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.41509432, g: 0.28390884, b: 0.28390884, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -1103,6 +1103,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5746147162638082140, guid: 66925fdaf8d6a354db67a0fd393d2123, type: 3}
+--- !u!1 &385386350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385386351}
+  m_Layer: 0
+  m_Name: StarPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &385386351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385386350}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -79.1, y: 1.33, z: -0.49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!54 &445124817
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1236,6 +1266,7 @@ GameObject:
   - component: {fileID: 473128897}
   - component: {fileID: 473128896}
   - component: {fileID: 473128895}
+  - component: {fileID: 473128900}
   m_Layer: 0
   m_Name: Cube
   m_TagString: pickableObj
@@ -1335,6 +1366,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &473128900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473128894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da897a37ea4c0247a7452306a7dcd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scanner: {fileID: 2733812513190862203, guid: f2861a5955d6b4744a743c6c7eb6b3d3, type: 3}
+  color: {r: 1, g: 0, b: 0.9271908, a: 0}
 --- !u!54 &476903346
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2607,6 +2652,7 @@ GameObject:
   - component: {fileID: 853146698}
   - component: {fileID: 853146703}
   - component: {fileID: 853146702}
+  - component: {fileID: 853146704}
   m_Layer: 0
   m_Name: Area para el dragobj
   m_TagString: Untagged
@@ -2720,6 +2766,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &853146704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853146697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da897a37ea4c0247a7452306a7dcd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scanner: {fileID: 2733812513190862203, guid: 51ae64c1f88637c49960ecd2468ad3c3, type: 3}
+  color: {r: 0.42137337, g: 0, b: 1, a: 0}
 --- !u!54 &863092645
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3127,6 +3187,7 @@ GameObject:
   - component: {fileID: 969518870}
   - component: {fileID: 969518869}
   - component: {fileID: 969518868}
+  - component: {fileID: 969518873}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3150,7 +3211,7 @@ MonoBehaviour:
   minimunLoudnes: 0.1
   scanner: {fileID: 2733812513190862203, guid: cd4814bb043024d4bb02be1c57065371, type: 3}
   canCreate: 0
-  scannerCooldown: 0.8
+  scannerCooldown: 0.3
   scannerPos: {fileID: 1639212910}
 --- !u!114 &969518869
 MonoBehaviour:
@@ -3212,7 +3273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969518867}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -83.17, y: 1.33, z: 0.2}
+  m_LocalPosition: {x: -144.25, y: 2.005, z: -23.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1275251968}
@@ -3221,6 +3282,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!54 &969518873
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969518867}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!54 &986318936
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3827,7 +3904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdArea: {fileID: 168987845}
-  PickupRange: 5
+  PickupRange: 2
   PickupForce: 150
   objButton: {fileID: 1250035362}
 --- !u!81 &1223239077
@@ -6506,6 +6583,42 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2911736426955009642, guid: 66925fdaf8d6a354db67a0fd393d2123, type: 3}
+--- !u!1 &1699091001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 374289202576707483, guid: 78df1db2fbc8ec64f949fac0c05bf693,
+    type: 3}
+  m_PrefabInstance: {fileID: 3139022680629425473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1699091002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699091001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da897a37ea4c0247a7452306a7dcd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scanner: {fileID: 2733812513190862203, guid: bf207ecaa8de6a34f9f625129bd3c203, type: 3}
+  color: {r: 1, g: 1, b: 0, a: 0}
+--- !u!54 &1699091006
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699091001}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!54 &1700203584
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8110,7 +8223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 969518872}
-  interactDistance: 10
+  interactDistance: 3
   doorButton: {fileID: 1767208160}
   keyButton: {fileID: 1480258807}
   rotationSpeed: 90
@@ -9644,7 +9757,6 @@ GameObject:
   - component: {fileID: 1317147365865263518}
   - component: {fileID: 1569227931}
   - component: {fileID: 1569228080}
-  - component: {fileID: 1156423682937311968}
   m_Layer: 0
   m_Name: door.006
   m_TagString: Untagged
@@ -9652,20 +9764,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1156423682937311968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156423682937311967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da897a37ea4c0247a7452306a7dcd13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scanner: {fileID: 2733812513190862203, guid: 04efe766ad09a4a49a67106f4a9a66b9, type: 3}
-  color: {r: 1, g: 0.26826465, b: 0, a: 0}
 --- !u!33 &1167697980967675930
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11992,7 +12090,7 @@ PrefabInstance:
     - target: {fileID: 3705028537381535112, guid: 78df1db2fbc8ec64f949fac0c05bf693,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.005
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 3705028537381535112, guid: 78df1db2fbc8ec64f949fac0c05bf693,
         type: 3}
@@ -14202,7 +14300,6 @@ GameObject:
   - component: {fileID: 9087848768678621190}
   - component: {fileID: 2099761068}
   - component: {fileID: 2099761072}
-  - component: {fileID: 5019061727087904954}
   m_Layer: 0
   m_Name: door.007
   m_TagString: Untagged
@@ -14210,20 +14307,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5019061727087904954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5019061727087904953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da897a37ea4c0247a7452306a7dcd13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scanner: {fileID: 2733812513190862203, guid: 04efe766ad09a4a49a67106f4a9a66b9, type: 3}
-  color: {r: 1, g: 0.26826465, b: 0, a: 0}
 --- !u!4 &5049705523653757513
 Transform:
   m_ObjectHideFlags: 0
