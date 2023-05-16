@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7293555422934190134}
   - component: {fileID: 6510774116274259616}
   m_Layer: 0
-  m_Name: Scanner 1
+  m_Name: Scanner Key
   m_TagString: Scanner2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,5 +111,5 @@ MonoBehaviour:
   grouth: 0.15646744
   force: 15
   destroyTime: 2
-  colorScanner: {r: 1, g: 0.52359486, b: 0, a: 0}
+  colorScanner: {r: 1, g: 1, b: 0, a: 0}
   render: {fileID: 906355897072418292}
