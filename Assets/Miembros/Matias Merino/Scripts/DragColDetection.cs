@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class DragColDetection : MonoBehaviour
 {
-    public DoorControllerDrag dc;
+    public GameObject dc;
     public void OnTriggerEnter(Collider col)
     {
 
-        if (col.transform.tag == "pickableObj")
+        if (col.tag == "pickableObj")
         {
 
-            dc.OpenDoor();
+            dc.GetComponent<DoorControllerDrag>().OpenDoor();
 
         }
     }

@@ -586,6 +586,7 @@ MonoBehaviour:
   interactDistance: 3
   interactButton: {fileID: 828008480}
   rotationSpeed: 90
+  tr: 90
   puerta: {fileID: 6836654231305872293}
 --- !u!54 &163351945
 Rigidbody:
@@ -1250,7 +1251,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473128894}
   serializedVersion: 2
-  m_Mass: 3
+  m_Mass: 4
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1332,7 +1333,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &476903346
 Rigidbody:
@@ -2555,12 +2556,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853146697}
-  m_LocalRotation: {x: 0.000000026692545, y: -0.7071066, z: -0.000000026692529, w: 0.70710695}
-  m_LocalPosition: {x: -0.9790978, y: -0.010404, z: 0.020930022}
-  m_LocalScale: {x: 0.0133333355, y: 0.002, z: 0.0133333355}
-  m_Children: []
-  m_Father: {fileID: 1709785905}
-  m_RootOrder: 2
+  m_LocalRotation: {x: -0, y: -0, z: 1.7763568e-15, w: 1}
+  m_LocalPosition: {x: -145.08, y: 0.73, z: 123.90895}
+  m_LocalScale: {x: 2, y: 0.3, z: 2}
+  m_Children:
+  - {fileID: 1828730818}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &853146702
 MonoBehaviour:
@@ -2574,7 +2576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7ac38287f19e64595e9a6bb1396075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dc: {fileID: 1709785906}
+  dc: {fileID: 1709785904}
 --- !u!54 &853146703
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2953,6 +2955,7 @@ MonoBehaviour:
   interactDistance: 3
   interactButton: {fileID: 215567830}
   rotationSpeed: 90
+  tr: 90
   puerta: {fileID: 8638137995491997771}
 --- !u!54 &955366207
 Rigidbody:
@@ -3082,7 +3085,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969518867}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -142.45, y: 1.743, z: 128.27}
+  m_LocalPosition: {x: -142.29, y: 1.743, z: 128.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1275251968}
@@ -3169,6 +3172,7 @@ MonoBehaviour:
   interactDistance: 3
   interactButton: {fileID: 1932588166}
   rotationSpeed: 90
+  tr: -90
   puerta: {fileID: 2250747087315654364}
 --- !u!54 &1005376025
 Rigidbody:
@@ -3555,6 +3559,7 @@ MonoBehaviour:
   interactDistance: 3
   interactButton: {fileID: 1126206420}
   rotationSpeed: 90
+  tr: 0
   puerta: {fileID: 9004377078181904896}
 --- !u!54 &1190031425
 Rigidbody:
@@ -6574,16 +6579,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709785904}
-  m_LocalRotation: {x: -0.000000026692547, y: 0.7071066, z: 0.00000002669253, w: 0.70710695}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -98.81295, y: 1.4363999, z: -15.3038025}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 5063566846900333443}
-  - {fileID: 1828730818}
-  - {fileID: 853146701}
   m_Father: {fileID: 274771052}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1709785906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6597,6 +6600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 90
+  tr: 0
 --- !u!1 &1727991770
 GameObject:
   m_ObjectHideFlags: 0
@@ -6690,7 +6694,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1750256030
 Rigidbody:
@@ -7062,12 +7066,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828730817}
-  m_LocalRotation: {x: 0.000000026692545, y: -0.7071066, z: -0.000000026692529, w: 0.70710695}
-  m_LocalPosition: {x: -0.97909766, y: -0.010184, z: 0.020930022}
-  m_LocalScale: {x: 0.016000003, y: 0.00059999997, z: 0.016000003}
+  m_LocalRotation: {x: -0, y: -0, z: 1.7763568e-15, w: 1}
+  m_LocalPosition: {x: -0, y: -0.24, z: -0.000022351735}
+  m_LocalScale: {x: 1.1999999, y: 0.29999995, z: 1.1999999}
   m_Children: []
-  m_Father: {fileID: 1709785905}
-  m_RootOrder: 1
+  m_Father: {fileID: 853146701}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1828730819
 BoxCollider:
@@ -7359,6 +7363,7 @@ MonoBehaviour:
   interactDistance: 3
   interactButton: {fileID: 566223080}
   rotationSpeed: 90
+  tr: 90
   puerta: {fileID: 4550278536514769245}
 --- !u!1 &1844813397
 GameObject:
@@ -7982,6 +7987,7 @@ MonoBehaviour:
   doorButton: {fileID: 1767208160}
   keyButton: {fileID: 1480258807}
   rotationSpeed: 90
+  tr: -90
   posPuerta: {fileID: 2647898423546112281}
   posLlave: {fileID: 0}
 --- !u!1 &2026615341

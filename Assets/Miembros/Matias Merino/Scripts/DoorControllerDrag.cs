@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DoorControllerDrag : MonoBehaviour
 {
     public float rotationSpeed = 90f; // Velocidad de rotación de la puerta
-
+    public float tr;
     private bool doorOpened = false; // Variable para controlar si la puerta está abierta
 
 
@@ -17,7 +17,7 @@ public class DoorControllerDrag : MonoBehaviour
             return;
 
         // Rota la puerta hacia la posición abierta
-        Quaternion targetRotation = Quaternion.Euler(0f, 90f, 0f);
+        Quaternion targetRotation = Quaternion.Euler(0f, tr, 0f);
         StartCoroutine(RotateDoor(targetRotation));
 
         // Marca la puerta como abierta

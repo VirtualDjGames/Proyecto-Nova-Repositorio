@@ -9,6 +9,7 @@ public class DoorController : MonoBehaviour
     public float interactDistance = 3f; // Distancia a la que el jugador puede interactuar con la puerta
     public Button interactButton; // Referencia al botón de interacción en la interfaz de usuario
     public float rotationSpeed = 90f; // Velocidad de rotación de la puerta
+    public float tr;
     public Transform puerta;
 
     private bool nearDoor = false; // Variable para controlar si el jugador está cerca de la puerta
@@ -49,7 +50,7 @@ public class DoorController : MonoBehaviour
             return;
 
         // Rota la puerta hacia la posición abierta
-        Quaternion targetRotation = Quaternion.Euler(0f, 90f, 0f);
+        Quaternion targetRotation = Quaternion.Euler(0f, tr, 0f);
         StartCoroutine(RotateDoor(targetRotation));
 
         // Marca la puerta como abierta
